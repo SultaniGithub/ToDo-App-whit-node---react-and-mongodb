@@ -11,7 +11,7 @@ mongoose.connect("mongodb://127.0.0.1:27017/todolist",{
     useNewUrlParser:true
 }).then(()=>{
     console.log("db is connected")
-})
+}).catch(console.error)
 
 
 app.listen('8000',()=>{
