@@ -11,5 +11,10 @@
     "url": "todo list by react and node"
   },
   "author": "Sultani",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mongoose": "^7.2.0"
+  }
 }
