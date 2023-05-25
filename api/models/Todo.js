@@ -1,10 +1,7 @@
 const mongoose=require('mongoose');
 
 const TodoSchema=new mongoose.Schema({
-    text:{
-        type:String,
-        required:[true,"the text filed should'nt be empty"]
-    },
+    text:String,
     complete:{
         type:Boolean,
         default:false
@@ -16,6 +13,6 @@ const TodoSchema=new mongoose.Schema({
 
 })
 
-const Todo=mongoose.model('Todo',TodoSchema);
+const Todo=mongoose.model('todos',TodoSchema);
 
 module.exports=Todo;
