@@ -19,9 +19,26 @@ function App() {
  setTodos(data);
  }
 
-const completeToDo=(id)=>{
+const completeToDo=async(id)=>{
+
+  const todo= await axios.get(`http://localhost:8000/api/v1/todo/${id}`)
+  const targetTodo=todo.data.data.data;
+  
+  setTodos(todos.map(todo=>{
+    if(todo._id===targetTodo._id){
+       todo.complete=!todo.complete;
+    }
+    return todo
+  }))
+  // const todo=todos;
+  // const targetTodo=todo.find(id=>(id===id))
+  // targetTodo.complete=!targetTodo.complete;
+  // todo.push(targetTodo);
+  // setTodos(todo);
   
 }
+
+
 
   
   return (
