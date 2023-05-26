@@ -56,7 +56,7 @@ exports.update=async (req,res)=>{
             new:true,
             runValidators:true
         });
-        todo.complete=!todo.complete;
+        todo.complete=!todo.complete
         res.status(200).json({
             status:"success",
             data:{
