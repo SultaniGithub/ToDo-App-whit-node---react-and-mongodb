@@ -9,6 +9,7 @@ todoRouter.route('/')
 todoRouter.route('/:id')
 .delete(todoControllers.delete)
 .patch(todoControllers.update)
+.get(todoControllers.getTodoById)
 
 module.exports=todoRouter;
 
