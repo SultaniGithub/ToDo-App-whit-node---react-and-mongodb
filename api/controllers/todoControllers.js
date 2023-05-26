@@ -50,6 +50,20 @@ exports.delete=async(req,res)=>{
     }
 }
 
+exports.getTodoById=async(req,res)=>{
+    try{
+    let todo=await Todo.findById(req.params.id);
+    res.status(200).json({
+        status:"success",
+        data:{
+            data:todo
+        }
+    })
+    }catch(err){
+        res.send(err)
+    } 
+}
+
 exports.update=async (req,res)=>{
     try{
         let todo=await Todo.findByIdAndUpdate(req.params.id,req.body,{
