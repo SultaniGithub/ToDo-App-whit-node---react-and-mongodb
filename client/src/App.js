@@ -17,7 +17,7 @@ function App() {
  const data=todo.data.data.todo
  setTodos(data);
  }
-console.log({newTodo})
+//console.log({newTodo})
 const completeToDo=async(id)=>{
 
   const todo= await axios.get(`http://localhost:8000/api/v1/todo/${id}`)
@@ -38,19 +38,20 @@ const deleteToDo=async (id)=>{
 }
 console.log(newTodo)
 
-const createTodo= ()=>{
+const createTodo=async ()=>{
   
     const options={
       method:'POST',
       url:'http://localhost:8000/api/v1/todo/',
       data:[{text:newTodo}]
     }
-    const newt= axios.request(options);
+    const newtodo=await axios.request(options);
+ 
+ setTodos([...todos , newtodo])
+ getTodo()
   setPopUpActive(false);
-  
-  setTodos([...todos , newt])
-
   setNewTodo("");
+  
 }
 
   
