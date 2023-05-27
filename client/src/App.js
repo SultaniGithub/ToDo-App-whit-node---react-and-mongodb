@@ -38,33 +38,31 @@ const deleteToDo=async (id)=>{
 }
 console.log(newTodo)
 
-const createTodo=async ()=>{
-  try{
+const createTodo= ()=>{
+  
     const options={
       method:'POST',
       url:'http://localhost:8000/api/v1/todo/',
       data:[{text:newTodo}]
     }
-    const newt=await axios.request(options);
-  }catch(err){
-    console.log(err)
-  }
-
-
+    const newt= axios.request(options);
   setPopUpActive(false);
   
-  setTodos([...todos , newTodo])
+  setTodos([...todos , newt])
 
   setNewTodo("");
 }
 
   
   return (
+   
     <div className="App">
+    
       <h1>Welcome</h1> 
       <h4>your tasks</h4>
-
+      {todos.length===0 ? (<h3>there is no task in list</h3>) : ""}
          <div className="todos"> 
+         
           {todos.map(todo=>(
 
       <div className={"todo "+(todo.complete? "is-complete " : '')} key={todo._id} onClick={()=>{completeToDo(todo._id)}}>
