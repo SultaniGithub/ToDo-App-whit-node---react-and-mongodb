@@ -127,3 +127,101 @@ h4{
   background-color: #D81E5B;
 }
 
+.popUpActive{
+
+  position:fixed;
+  bottom:32px;
+  right:32px;
+
+ width:40px;
+ height: 40px; 
+
+ background-color: var(--primary);
+ border-radius: 999px;
+
+ color:#f2f5f8;
+ align-items: center;
+ font-size: 40px;
+ font-weight: 400px;
+ justify-content: center;
+ display:flex;
+ cursor: pointer;
+ /* transition: 0.2s; */
+ 
+}
+
+.popUpActive:hover{
+  font-size: 43px;
+
+}
+
+.popUp{
+  background-color: var(--light);
+  position:fixed;
+  top:50%;
+  left:50%;
+
+  transform: translate(-50%,-50%);
+  width: 100%;
+  max-width: 400px;
+  padding:16px;
+  border-radius: 16px;
+}
+
+.close-popup{
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  color:#202B3E;
+  background-color: #D81E5B;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor:pointer;
+
+}
+
+
+.content{
+  width: 90%;
+  margin: auto;
+  /* background-color: #D81E5B; */
+}
+.add-todo-input{
+  border: none;
+  appearance:none;
+  outline: none;
+  border-radius: 16px;
+  width:94%;
+  padding:10px;
+  font-size: 18px;
+  
+}
+
+
+.content h3{
+  color: var(--dark-alt);
+  margin:16px;
+  font-weight: 400;
+  text-transform: u;
+}
+
+
+.create-todo{
+  padding: 10px 32px;
+  color:#202B3E;
+  font-weight: 500;
+  background-color: #b95c7bd8;
+  border-radius: 16px;
+  text-align: center;
+  font-size: 18px;
+  margin-top: 10px;
+  display: inline-block;
+  cursor: pointer;
+
+
+}
+
